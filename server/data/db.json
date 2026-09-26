@@ -1,0 +1,352 @@
+{
+  "warehouses": [
+    {
+      "id": "wh-main",
+      "code": "WH",
+      "name": "Main Central Warehouse",
+      "address": "Plot 42, Industrial Zone, Pune, MH - 411019",
+      "isActive": true
+    },
+    {
+      "id": "wh-west",
+      "code": "WDC",
+      "name": "West Distribution Center",
+      "address": "Sector 9, Turbhe, Navi Mumbai, MH - 400705",
+      "isActive": true
+    }
+  ],
+  "locations": [
+    {
+      "id": "loc-wh-stock",
+      "warehouseId": "wh-main",
+      "name": "WH/Stock (Main Store)",
+      "type": "internal",
+      "path": "WH/Stock"
+    },
+    {
+      "id": "loc-wh-rack-a",
+      "warehouseId": "wh-main",
+      "name": "WH/Stock/Rack A",
+      "type": "internal",
+      "path": "WH/Stock/Rack A"
+    },
+    {
+      "id": "loc-wh-rack-b",
+      "warehouseId": "wh-main",
+      "name": "WH/Stock/Rack B",
+      "type": "internal",
+      "path": "WH/Stock/Rack B"
+    },
+    {
+      "id": "loc-wh-prod",
+      "warehouseId": "wh-main",
+      "name": "WH/Production Floor",
+      "type": "internal",
+      "path": "WH/Production"
+    },
+    {
+      "id": "loc-wdc-stock",
+      "warehouseId": "wh-west",
+      "name": "WDC/Stock (Storage Bay)",
+      "type": "internal",
+      "path": "WDC/Stock"
+    },
+    {
+      "id": "loc-vendors",
+      "warehouseId": null,
+      "name": "Partner Locations/Vendors",
+      "type": "supplier",
+      "path": "Vendors"
+    },
+    {
+      "id": "loc-customers",
+      "warehouseId": null,
+      "name": "Partner Locations/Customers",
+      "type": "customer",
+      "path": "Customers"
+    },
+    {
+      "id": "loc-loss",
+      "warehouseId": null,
+      "name": "Virtual Locations/Inventory Loss",
+      "type": "inventory_loss",
+      "path": "Inventory Loss"
+    }
+  ],
+  "products": [
+    {
+      "id": "prod-1",
+      "name": "Steel Rods (12mm TMT)",
+      "sku": "STEEL-ROD-12",
+      "category": "Raw Materials",
+      "uom": "kg",
+      "costPrice": 65,
+      "salePrice": 85,
+      "minQty": 40,
+      "maxQty": 250,
+      "description": "High tensile reinforcement steel bars for structural fabrication.",
+      "barcode": "890123456701"
+    },
+    {
+      "id": "prod-2",
+      "name": "Ergonomic Wooden Chairs",
+      "sku": "FURN-CHR-01",
+      "category": "Finished Goods",
+      "uom": "Units",
+      "costPrice": 1200,
+      "salePrice": 2200,
+      "minQty": 10,
+      "maxQty": 80,
+      "description": "Solid teakwood ergonomic office and conference chair.",
+      "barcode": "890123456702"
+    },
+    {
+      "id": "prod-3",
+      "name": "Aluminum Extrusion Frames",
+      "sku": "ALUM-FRM-40",
+      "category": "Raw Materials",
+      "uom": "Units",
+      "costPrice": 450,
+      "salePrice": 720,
+      "minQty": 15,
+      "maxQty": 100,
+      "description": "Anodized 40x40 T-slot aluminum modular profile (2 meters).",
+      "barcode": "890123456703"
+    },
+    {
+      "id": "prod-4",
+      "name": "Heavy Duty Caster Wheels",
+      "sku": "HD-CW-75",
+      "category": "Hardware",
+      "uom": "Pcs",
+      "costPrice": 80,
+      "salePrice": 145,
+      "minQty": 25,
+      "maxQty": 200,
+      "description": "3-inch industrial polyurethane swivel caster wheels with brake.",
+      "barcode": "890123456704"
+    },
+    {
+      "id": "prod-5",
+      "name": "Corrugated Packaging Boxes",
+      "sku": "PKG-BOX-L",
+      "category": "Packaging",
+      "uom": "Units",
+      "costPrice": 18,
+      "salePrice": 32,
+      "minQty": 50,
+      "maxQty": 500,
+      "description": "3-ply heavy kraft cardboard master shipping cartons.",
+      "barcode": "890123456705"
+    }
+  ],
+  "stockLevels": [
+    {
+      "productId": "prod-1",
+      "locationId": "loc-wh-stock",
+      "qtyOnHand": 100,
+      "qtyReserved": 0
+    },
+    {
+      "productId": "prod-1",
+      "locationId": "loc-wh-prod",
+      "qtyOnHand": 20,
+      "qtyReserved": 0
+    },
+    {
+      "productId": "prod-2",
+      "locationId": "loc-wh-stock",
+      "qtyOnHand": 15,
+      "qtyReserved": 5
+    },
+    {
+      "productId": "prod-2",
+      "locationId": "loc-wdc-stock",
+      "qtyOnHand": 8,
+      "qtyReserved": 0
+    },
+    {
+      "productId": "prod-3",
+      "locationId": "loc-wh-stock",
+      "qtyOnHand": 8,
+      "qtyReserved": 0
+    },
+    {
+      "productId": "prod-4",
+      "locationId": "loc-wh-rack-a",
+      "qtyOnHand": 60,
+      "qtyReserved": 10
+    },
+    {
+      "productId": "prod-5",
+      "locationId": "loc-wh-rack-b",
+      "qtyOnHand": 35,
+      "qtyReserved": 0
+    }
+  ],
+  "receipts": [
+    {
+      "id": "rec-001",
+      "reference": "WH/IN/0001",
+      "supplier": "Tata Steel Tubes Ltd.",
+      "destinationLocationId": "loc-wh-stock",
+      "scheduledDate": "2026-09-28",
+      "status": "ready",
+      "notes": "Urgent batch for Q3 structural frames.",
+      "lines": [
+        {
+          "productId": "prod-1",
+          "demandQty": 100,
+          "receivedQty": 100,
+          "uom": "kg"
+        }
+      ],
+      "createdAt": "2026-09-24T10:30:00Z",
+      "validatedAt": null
+    },
+    {
+      "id": "rec-002",
+      "reference": "WH/IN/0002",
+      "supplier": "Jindal Aluminum Fabrications",
+      "destinationLocationId": "loc-wh-stock",
+      "scheduledDate": "2026-09-30",
+      "status": "draft",
+      "notes": "Replenishment for low stock frames.",
+      "lines": [
+        {
+          "productId": "prod-3",
+          "demandQty": 50,
+          "receivedQty": 0,
+          "uom": "Units"
+        }
+      ],
+      "createdAt": "2026-09-25T14:15:00Z",
+      "validatedAt": null
+    },
+    {
+      "id": "rec-000",
+      "reference": "WH/IN/0000",
+      "supplier": "National Hardware Supply Co.",
+      "destinationLocationId": "loc-wh-rack-a",
+      "scheduledDate": "2026-09-20",
+      "status": "done",
+      "notes": "Bulk caster wheels shipment received and shelved.",
+      "lines": [
+        {
+          "productId": "prod-4",
+          "demandQty": 60,
+          "receivedQty": 60,
+          "uom": "Pcs"
+        }
+      ],
+      "createdAt": "2026-09-19T09:00:00Z",
+      "validatedAt": "2026-09-20T11:45:00Z"
+    }
+  ],
+  "deliveries": [
+    {
+      "id": "del-001",
+      "reference": "WH/OUT/0001",
+      "customer": "Apex Modern Spaces Pvt Ltd",
+      "sourceLocationId": "loc-wh-stock",
+      "scheduledDate": "2026-09-27",
+      "status": "ready",
+      "notes": "Dispatch via Express Freight. Customer delivery confirmed.",
+      "lines": [
+        {
+          "productId": "prod-2",
+          "demandQty": 5,
+          "reservedQty": 5,
+          "doneQty": 5,
+          "uom": "Units"
+        }
+      ],
+      "createdAt": "2026-09-25T11:00:00Z",
+      "validatedAt": null
+    },
+    {
+      "id": "del-002",
+      "reference": "WH/OUT/0002",
+      "customer": "Zenith Architecture Studio",
+      "sourceLocationId": "loc-wh-stock",
+      "scheduledDate": "2026-10-02",
+      "status": "waiting",
+      "notes": "Awaiting remaining production batch.",
+      "lines": [
+        {
+          "productId": "prod-2",
+          "demandQty": 10,
+          "reservedQty": 0,
+          "doneQty": 0,
+          "uom": "Units"
+        }
+      ],
+      "createdAt": "2026-09-25T16:40:00Z",
+      "validatedAt": null
+    }
+  ],
+  "transfers": [
+    {
+      "id": "int-001",
+      "reference": "WH/INT/0001",
+      "sourceLocationId": "loc-wh-stock",
+      "destinationLocationId": "loc-wh-prod",
+      "scheduledDate": "2026-09-26",
+      "status": "ready",
+      "notes": "Move raw steel bars to production floor for cutting.",
+      "lines": [
+        {
+          "productId": "prod-1",
+          "qty": 25,
+          "uom": "kg"
+        }
+      ],
+      "createdAt": "2026-09-25T08:30:00Z",
+      "validatedAt": null
+    }
+  ],
+  "adjustments": [
+    {
+      "id": "adj-001",
+      "reference": "WH/ADJ/0001",
+      "productId": "prod-1",
+      "locationId": "loc-wh-stock",
+      "recordedQty": 103,
+      "countedQty": 100,
+      "difference": -3,
+      "reason": "3 kg damaged steel rods written off during quarterly audit.",
+      "date": "2026-09-22T15:20:00Z",
+      "status": "done"
+    }
+  ],
+  "moveHistory": [
+    {
+      "id": "mov-1",
+      "date": "2026-09-20 11:45",
+      "reference": "WH/IN/0000",
+      "docType": "receipt",
+      "productName": "Heavy Duty Caster Wheels",
+      "productId": "prod-4",
+      "fromLocation": "Partner Locations/Vendors",
+      "toLocation": "WH/Stock/Rack A",
+      "quantity": 60,
+      "uom": "Pcs",
+      "status": "Done",
+      "user": "Warehouse Staff (Raj)"
+    },
+    {
+      "id": "mov-2",
+      "date": "2026-09-22 15:20",
+      "reference": "WH/ADJ/0001",
+      "docType": "adjustment",
+      "productName": "Steel Rods (12mm TMT)",
+      "productId": "prod-1",
+      "fromLocation": "WH/Stock (Main Store)",
+      "toLocation": "Virtual Locations/Inventory Loss",
+      "quantity": -3,
+      "uom": "kg",
+      "status": "Done",
+      "user": "Inventory Manager (Aditi)"
+    }
+  ]
+}
