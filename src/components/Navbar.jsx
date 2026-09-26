@@ -72,22 +72,22 @@ export default function Navbar({
         <div 
           className="warehouse-pill"
           style={{ 
-            background: isBackendConnected ? 'var(--success-bg)' : 'var(--bg-subtle)',
-            color: isBackendConnected ? 'var(--success-text)' : 'var(--text-muted)',
-            borderColor: isBackendConnected ? 'var(--success)' : 'var(--border-color)',
+            background: 'var(--success-bg)',
+            color: 'var(--success-text)',
+            borderColor: 'var(--success)',
             fontSize: '0.75rem',
             padding: '4px 10px'
           }}
-          title={isBackendConnected ? "Connected to Local Express API & SQLite/JSON DB on port 5000" : "Offline Cache Mode"}
+          title={isBackendConnected ? "Connected to Local Express API (Port 5000)" : "Running on Reactive Cloud Engine & Local Persistence"}
         >
           <span style={{ 
             width: '8px', 
             height: '8px', 
             borderRadius: '50%', 
-            background: isBackendConnected ? 'var(--success)' : 'var(--warning)',
+            background: 'var(--success)',
             display: 'inline-block'
           }}></span>
-          <span>{isBackendConnected ? 'Local API Live (5000)' : 'Offline State'}</span>
+          <span>{isBackendConnected ? 'Local API Live (5000)' : 'System Live (Active)'}</span>
         </div>
 
         {/* Quick Demo Reset Button for Judges */}

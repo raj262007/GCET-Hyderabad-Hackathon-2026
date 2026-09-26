@@ -2,10 +2,12 @@
 ### *Next-Gen Modular Inventory Management System (IMS)*
 
 [![Odoo Hackathon](https://img.shields.io/badge/Odoo%20Hackathon-2026-714B67?style=for-the-badge&logo=odoo&logoColor=white)](https://www.odoo.com/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel%20Active-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://gcet-hyderabad-hackathon-2026.vercel.app/)
 [![React 19](https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![Vite 8](https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vite.dev/)
-[![Express.js](https://img.shields.io/badge/Express.js-Backend%20API-000000?style=for-the-badge&logo=express&logoColor=white)](https://expressjs.com/)
-[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline%20First-10B981?style=for-the-badge)](http://localhost:5173)
+[![Offline First](https://img.shields.io/badge/Architecture-100%25%20Offline%20First-10B981?style=for-the-badge)](https://gcet-hyderabad-hackathon-2026.vercel.app/)
+
+> 🚀 **Live Production Deployment:** Explore the deployed application live here: [odoo-hackathon](https://gcet-hyderabad-hackathon-2026.vercel.app/)
 
 ---
 
@@ -155,6 +157,10 @@ npm run server
 npm run dev
 ```
 Open **[http://localhost:5173](http://localhost:5173)** in your browser!
+
+### 🌐 Instant Live Demo (No Setup Needed):
+If you want to test the application immediately without local installation, access the live cloud deployment directly at:
+👉 **[https://gcet-hyderabad-hackathon-2026.vercel.app/](https://gcet-hyderabad-hackathon-2026.vercel.app/)**
 
 ---
 
